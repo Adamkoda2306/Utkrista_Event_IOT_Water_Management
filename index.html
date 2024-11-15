@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Quality Monitoring</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Water Quality Monitoring Dashboard</h1>
+  </header>
+
+  <section id="statusSummary">
+    <div class="status-box safe">
+      <span class="status-icon">🟢</span>
+      <p>Safe</p>
+    </div>
+    <div class="status-box warning">
+      <span class="status-icon">🟡</span>
+      <p>Warning</p>
+    </div>
+    <div class="status-box unsafe">
+      <span class="status-icon">🔴</span>
+      <p>Unsafe</p>
+    </div>
+  </section>
+
+  <main id="deviceContainer"></main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
