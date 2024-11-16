@@ -88,6 +88,19 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
 
+            // Color-coded indication container
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _buildIndicator(Colors.green, 'Safe'),
+                  _buildIndicator(Colors.yellow, 'Warning'),
+                  _buildIndicator(Colors.red, 'Unsafe'),
+                ],
+              ),
+            ),
+
             // Display the first device's details or a placeholder
             devices.isNotEmpty
                 ? Card(
@@ -129,7 +142,7 @@ class _HomepageState extends State<Homepage> {
                   )
                 : const Center(child: Text('No device data available')),
 
-            SizedBox(height: 50),
+            SizedBox(height: 30),
 
             // Button to navigate to the secondary page to view all devices
             Center(
@@ -182,6 +195,29 @@ class _HomepageState extends State<Homepage> {
         Icon(icon, size: 20, color: Colors.blue),
         SizedBox(width: 10),
         Text(text, style: TextStyle(fontSize: 18)),
+      ],
+    );
+  }
+
+  Widget _buildIndicator(Color color, String label) {
+    return Row(
+      children: [
+        Container(
+          width: 20,
+          height: 20,
+          decoration: BoxDecoration(
+            color: color,
+            shape: BoxShape.circle,
+          ),
+        ),
+        SizedBox(width: 5),
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 16,
+            color: Colors.white,
+          ),
+        ),
       ],
     );
   }
