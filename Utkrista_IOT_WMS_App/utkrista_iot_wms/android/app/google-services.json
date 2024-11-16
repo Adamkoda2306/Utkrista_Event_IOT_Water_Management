@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "986962564367",
+    "firebase_url": "https://es-lab-be4bb-default-rtdb.firebaseio.com",
+    "project_id": "es-lab-be4bb",
+    "storage_bucket": "es-lab-be4bb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986962564367:android:c516423a9ba79e2ab2da7a",
+        "android_client_info": {
+          "package_name": "com.example.utkrista_iot_wms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKhI2_ROhkFBXLeFk7D-YW3o6LABr4FHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

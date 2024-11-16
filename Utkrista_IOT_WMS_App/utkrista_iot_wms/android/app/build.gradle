@@ -1,0 +1,54 @@
+plugins {
+    id("com.android.application")
+    id("kotlin-android")
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id("dev.flutter.flutter-gradle-plugin")
+    id("com.google.gms.google-services") // Google services plugin
+}
+
+android {
+    namespace = "com.example.utkrista_iot_wms" // Your app's package name
+    compileSdk = 34 // Set to match your project requirements
+    ndkVersion = "21.3.6528147" // Example NDK version; adjust as necessary
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId = "com.example.utkrista_iot_wms" // Unique application ID
+        minSdk = 21 // Minimum SDK version
+        targetSdk = 34 // Target SDK version
+        versionCode = 1 // Version code for this build
+        versionName = "1.0" // Version name for this build
+    }
+
+    buildTypes {
+        release {
+            // Signing config for release build
+            signingConfig = signingConfigs.debug
+            // To enable proguard for release builds, uncomment the following lines:
+            // minifyEnabled true
+            // proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+flutter {
+    source = "../.." // Path to your Flutter project
+}
+
+dependencies {
+    // Firebase dependencies with BOM (Bill of Materials)
+    implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
+    implementation("com.google.firebase:firebase-database-ktx") // Realtime Database
+    implementation("com.google.firebase:firebase-analytics-ktx") // Analytics (optional)
+    // Add other Firebase services as needed:
+    // implementation("com.google.firebase:firebase-auth-ktx") // Authentication
+    // implementation("com.google.firebase:firebase-storage-ktx") // Cloud Storage
+}
