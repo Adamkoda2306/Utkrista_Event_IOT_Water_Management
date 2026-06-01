@@ -111,11 +111,11 @@ Traditional water quality testing is:
 ┌──────────────────────────────────────────────────────────────────────┐
 │                         SENSOR LAYER                                 │
 │                                                                      │
-│  ┌──────────┐ ┌───────────┐ ┌──────┐ ┌──────────┐ ┌─────────────┐  │
-│  │pH Sensor │ │Turbidity  │ │  DO  │ │   Temp   │ │Conductivity │  │
-│  │          │ │  Sensor   │ │Sensor│ │  Sensor  │ │   Sensor    │  │
-│  └────┬─────┘ └─────┬─────┘ └──┬───┘ └────┬─────┘ └──────┬──────┘  │
-└───────┴─────────────┴──────────┴──────────┴──────────────┴──────────┘
+│  ┌──────────┐ ┌───────────┐ ┌──────┐ ┌──────────┐ ┌─────────────┐    │
+│  │pH Sensor │ │Turbidity  │ │  DO  │ │   Temp   │ │Conductivity │    │
+│  │          │ │  Sensor   │ │Sensor│ │  Sensor  │ │   Sensor    │    │
+│  └────┬─────┘ └─────┬─────┘ └──┬───┘ └────┬─────┘ └──────┬──────┘    │
+└───────┴─────────────┴──────────┴──────────┴──────────────┴───────────┘
                                   │
                                   ▼
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -139,7 +139,7 @@ Traditional water quality testing is:
 │                        CLOUD LAYER                                 │
 │                                                                    │
 │               ┌────────────────────────────┐                       │
-│               │  Firebase Realtime Database │                       │
+│               │  Firebase Realtime Database│                       │
 │               │  Utkrista_IOT/             │                       │
 │               │    Devices/                │                       │
 │               │      Device_ID/            │                       │
@@ -151,12 +151,12 @@ Traditional water quality testing is:
               ┌──────────────┴──────────────┐
               ▼                             ▼
 ┌─────────────────────┐         ┌───────────────────────┐
-│   Flutter Mobile    │         │    Web Dashboard       │
-│   Application       │         │  (GitHub Pages)        │
-│                     │         │                        │
-│  · Live readings    │         │  · Live readings       │
-│  · Status colors    │         │  · Status indicators   │
-│  · Multi-device     │         │  · Area-wise view      │
+│   Flutter Mobile    │         │    Web Dashboard      │
+│   Application       │         │  (GitHub Pages)       │
+│                     │         │                       │
+│  · Live readings    │         │  · Live readings      │
+│  · Status colors    │         │  · Status indicators  │
+│  · Multi-device     │         │  · Area-wise view     │
 └─────────────────────┘         └───────────────────────┘
 ```
 
@@ -262,21 +262,21 @@ Utkrista_Event_IOT_Water_Management/
 The system evaluates all parameters simultaneously against WHO-aligned thresholds and assigns one of three status levels:
 
 ```
-┌────────────────────────────────────────────────────────────────┐
-│                   CLASSIFICATION LOGIC                         │
-├──────────────┬──────────────────────────────────────────────── ┤
-│  🟢 SAFE     │  ALL parameters within safe limits              │
-│              │  pH: 6.5–8.5                                    │
-│              │  Turbidity: < 5 NTU                             │
-│              │  DO: > 6 mg/L                                   │
-│              │  Temperature: 5°C – 25°C                        │
-│              │  Conductivity: < 1500 µS/cm                     │
+┌───────────────────────────────────────────────────────────────┐
+│                   CLASSIFICATION LOGIC                        │
+├──────────────┬────────────────────────────────────────────────┤
+│  🟢 SAFE     │  ALL parameters within safe limits             │
+│              │  pH: 6.5–8.5                                   │
+│              │  Turbidity: < 5 NTU                            │
+│              │  DO: > 6 mg/L                                  │
+│              │  Temperature: 5°C – 25°C                       │
+│              │  Conductivity: < 1500 µS/cm                    │
 ├──────────────┼────────────────────────────────────────────────┤
-│  🟡 WARNING  │  One or more values approaching unsafe limits   │
-│              │  Early alert — action recommended               │
+│  🟡 WARNING  │  One or more values approaching unsafe limits  │
+│              │  Early alert — action recommended              │
 ├──────────────┼────────────────────────────────────────────────┤
-│  🔴 UNSAFE   │  One or more parameters exceed safe limits      │
-│              │  Immediate action required                      │
+│  🔴 UNSAFE   │  One or more parameters exceed safe limits     │
+│              │  Immediate action required                     │
 └──────────────┴────────────────────────────────────────────────┘
 ```
 
@@ -300,16 +300,16 @@ The system evaluates all parameters simultaneously against WHO-aligned threshold
 ### App Display Per Device
 
 ```
-┌─────────────────────────────────┐
-│  📍 Area: River Zone North      │
-│  Status: 🟢 SAFE                │
-│ ─────────────────────────────── │
-│  pH           │  7.2            │
-│  Turbidity    │  3.1 NTU        │
-│  DO           │  7.5 mg/L       │
-│  Temperature  │  22°C           │
-│  Conductivity │  820 µS/cm      │
-└─────────────────────────────────┘
+┌────────────────────────────────┐
+│  📍 Area: River Zone North     │
+│  Status: 🟢 SAFE               │
+│ ────────────────────────────── │
+│  pH           │  7.2           │
+│  Turbidity    │  3.1 NTU       │
+│  DO           │  7.5 mg/L      │
+│  Temperature  │  22°C          │
+│  Conductivity │  820 µS/cm     │
+└────────────────────────────────┘
 ```
 
 ---
