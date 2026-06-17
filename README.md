@@ -73,7 +73,7 @@ The system combines **embedded hardware** (Arduino + NodeMCU), **cloud infrastru
                                                └──▶ Web Dashboard
 ```
 
-Water quality is automatically classified as **🟢 Safe**, **🟡 Warning**, or **🔴 Unsafe** based on WHO-aligned sensor thresholds — enabling instant action when contamination is detected.
+Water quality is automatically classified as **🟢 Safe**, **🟡 Warning**, or **🔴 Unsafe** based on sensor thresholds — enabling instant action when contamination is detected.
 
 ---
 
